@@ -32,6 +32,8 @@ echo "### reboot                                                   ###"
 echo "###                                                          ###"
 echo "### systemctl enable --now NetworkManager sshd               ###"
 echo "###                                                          ###"
+echo "### FOR HOST:  systemctl enable --now lighttpd               ###"
+echo "###                                                          ###"
 echo "################################################################"
 echo ""
 
