@@ -1,0 +1,33 @@
+echo ">>> Enabling NetworkManager and sshd"
+systemctl enable --now NetworkManager sshd
+echo "..........................................................."
+
+# FOR HOST:  systemctl enable --now lighttpd
+
+echo ">>> Setting hostname"
+hostnamectl hostname gentoo-x86
+echo "..........................................................."
+
+echo "media-libs/libsndfile minimal" >> /etc/portage/package.use/package.use
+echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo ">=media-video/ffmpeg-4.4.2 opus" >> /etc/portage/package.use/package.use
+echo ">=dev-libs/libdbusmenu-16.04.0-r2 gtk3" >> /etc/portage/package.use/package.use
+echo "net-misc/remmina rdp ssh" >> /etc/portage/package.use/package.use
+echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "net-im/telegram-desktop-bin ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+
+emerge app-misc/screen neofetch btop sudo app-portage/gentoolkit esearch media-sound/alsa-utils app-eselect/eselect-repository dev-vcs/git
+eselect repository enable guru ace brave-overlay && emerge --sync guru ace brave-overlay
+eupdatedb
+
+EDITOR=nano visudo
+eselect profile set 10  #systemd desktop plasma
+emerge kde-plasma/plasma-meta
+emerge --update --deep --newuse @world
+emerge kde-apps/kdecore-meta #lessen the MAKEOPTS value
+
+systemctl set-default graphical
+systemctl enable sddm
+
+
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin
