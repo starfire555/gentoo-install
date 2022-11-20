@@ -47,7 +47,7 @@ echo "..........................................................."
   #server.document-root = "/var/www/localhost/"
   #server.errorlog = "/var/log/lighttpd/http_error.log"
   #accesslog.filename = "/var/log/lighttpd/http_access.log"
-}
+#}
 ## add this to the end of the standard configuration
 #server.dir-listing = "enable"
 #server.modules += ( "mod_alias" )
