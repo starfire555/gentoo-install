@@ -17,4 +17,8 @@ sed -i 's/EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/#EMERGE_D
 echo 'EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkg --usepkg-exclude '\''xrdp xorgxrdp'\''"' >> /etc/portage/make.conf
 emerge --ask --verbose xorg xorgxrdp
 
+echo '#!/bin/bash' > /home/x/.xinitrc
+echo 'startplasma-x11' >> /home/x/.xinitrc
+chmod +x /home/x/.xinitrc
 
+systemctl enable xrdp
