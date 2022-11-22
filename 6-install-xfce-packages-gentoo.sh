@@ -2,7 +2,6 @@ echo ">>> Setting USE flag for poppler"
 echo "app-text/poppler -qt5" >> /etc/portage/package.use/package.use
 echo "..........................................................."
 
-
 echo ">>> Setting package USE flags"
 echo "media-libs/libsndfile minimal" >> /etc/portage/package.use/package.use
 echo ">=dev-libs/libdbusmenu-16.04.0-r2 gtk3" >> /etc/portage/package.use/package.use
@@ -18,6 +17,12 @@ emerge xfce-base/xfce4-meta x11-misc/lightdm
 
 systemctl set-default graphical
 systemctl enable lightdm
+echo "..........................................................."
+
+echo ">>> Setting package ACCEPT_KEYWORDS"
+echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "net-im/telegram-desktop-bin ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
