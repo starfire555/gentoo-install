@@ -10,7 +10,7 @@ echo "..........................................................."
 
 echo ">>> Installing xfce4"
 emerge --oneshot xfce-extra/xfce4-notifyd
-emerge xfce-base/xfce4-meta x11-misc/lightdm
+emerge xfce-base/xfce4-meta x11-misc/lightdm xrandr
 
 #emerge --ask x11-themes/greybird
 #emerge --ask x11-themes/clearlooks-phenix x11-themes/gnome-themes-standard x11-themes/light-themes x11-themes/murrine-themes x11-themes/shiki-colors x11-themes/tactile3 x11-themes/zukini
