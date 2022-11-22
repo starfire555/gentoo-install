@@ -7,18 +7,13 @@ systemctl set-default graphical
 systemctl enable sddm
 echo "..........................................................."
 
-echo ">>> Installing desktop packages"
-emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin
+echo ">>> Setting package ACCEPT_KEYWORDS"
+echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "net-im/telegram-desktop-bin ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "..........................................................."
 
-echo "net-misc/xrdp ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords 
-echo "net-misc/xorgxrdp ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
-sed -i 's/EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/#EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/g' /etc/portage/make.conf
-echo 'EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkg --usepkg-exclude '\''xrdp xorgxrdp'\''"' >> /etc/portage/make.conf
-emerge --ask --verbose xorg xorgxrdp
-
-echo '#!/bin/bash' > /home/x/.xinitrc
-echo 'startplasma-x11' >> /home/x/.xinitrc
-chmod +x /home/x/.xinitrc
-
-systemctl enable xrdp
+echo ">>> Installing desktop packages"
+emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin
+echo "..........................................................."
