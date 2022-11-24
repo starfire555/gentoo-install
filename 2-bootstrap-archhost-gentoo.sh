@@ -1,5 +1,5 @@
 echo ">>> Getting and extracting gentoo stage 3"
-cd /mnt/gentoo
+cd /var/lib/machines/gentoo-bh/
 wget --recursive --level=1 --no-parent --no-directories  --accept-regex 'stage3-amd64-desktop-systemd-.{17}tar.xz' --directory-prefix=. https://www.mirrorservice.org/sites/distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-systemd/
 rm index.html && rm *.tar.xz.*
 tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
