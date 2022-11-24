@@ -53,8 +53,6 @@ mkdir /mnt/gentoo/boot/efi
 mount $_efi /mnt/gentoo/boot/efi
 rm -Rf /mnt/gentoo/boot/efi/EFI/gentoo
 
-cp -R ../gentoo-install /mnt/gentoo/
-
 echo ""
 echo "............................................."
 echo ""
