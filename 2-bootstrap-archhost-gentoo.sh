@@ -6,7 +6,7 @@ tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
 echo "..........................................................."
 
 echo ">>> Copying gentoo install scripts into chroot"
-cp -R ../gentoo-install /mnt/gentoo/
+cp -R /gentoo-install /mnt/gentoo/
 echo "..........................................................."
 
 echo ">>> Updating make.conf: MAKEOPTS, GENTOO_MIRRORS"
