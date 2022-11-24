@@ -31,7 +31,7 @@ echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 #echo "..........................................................."
 
 #echo ">>> Updating etc/portage/binrepos.conf with binhost details"
-#cat << EOF > etc/portage/binrepos.conf
+#cat <<EOF > etc/portage/binrepos.conf
 #[binhost]
 #sync-uri = http://192.168.1.186:80/packages
 #priority = 10
@@ -41,7 +41,7 @@ echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 
 ### HOST gentoo ###
 #emerge www-servers/lighttpd
-#cat << EOF >> /etc/lighttpd/lighttpd.conf
+#cat <<EOF >> /etc/lighttpd/lighttpd.conf
 #$SERVER["socket"] == "192.168.1.186:443" {
   #server.name = "192.168.1.186"
   #server.document-root = "/var/www/localhost/"
@@ -57,7 +57,7 @@ echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 
 ### HOST arch ###
 pacman -S lighttpd
-cat << EOF >> /etc/lighttpd/lighttpd.conf
+cat <<EOF >> /etc/lighttpd/lighttpd.conf
 
 # add this to the end of the standard configuration
 server.dir-listing = "enable"
