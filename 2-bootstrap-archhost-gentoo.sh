@@ -57,7 +57,7 @@ echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 
 ### HOST arch ###
 pacman -S lighttpd
-cat < EOF >> /etc/lighttpd/lighttpd.conf
+cat << EOF >> /etc/lighttpd/lighttpd.conf
 
 # add this to the end of the standard configuration
 server.dir-listing = "enable"
