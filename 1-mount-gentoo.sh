@@ -37,7 +37,6 @@ mount -o noatime,compress=lzo,space_cache=v2,subvol=@ $_root /mnt/gentoo
 mount -o noatime,compress=lzo,space_cache=v2,subvol=@home $_root /mnt/gentoo/home 
 mount $_boot /mnt/gentoo/boot
 mount $_efi /mnt/gentoo/boot/efi
-rm -Rf /mnt/gentoo/boot/efi/EFI/gentoo
 
 echo ""
 echo "............................................."
