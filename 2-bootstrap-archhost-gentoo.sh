@@ -5,6 +5,9 @@ rm index.html && rm *.tar.xz.*
 tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
 echo "..........................................................."
 
+echo ">>> Copying gentoo install scripts into chroot"
+cp -R ../gentoo-install /mnt/gentoo/
+echo "..........................................................."
 
 echo ">>> Updating make.conf: MAKEOPTS, GENTOO_MIRRORS"
 #sed -i 's/COMMON_FLAGS="-O2 -pipe"/COMMON_FLAGS="-O2 -pipe -march=x86_64"/g' etc/portage/make.conf
