@@ -6,6 +6,11 @@ echo ">=sys-libs/zlib-1.2.12-r3 minizip" >> /etc/portage/package.use/package.use
 echo ">=media-video/ffmpeg-4.4.2 opus" >> /etc/portage/package.use/package.use #for telegram-desktop:
 echo "..........................................................."
 
+echo ">>> Setting package ACCEPT_KEYWORDS"
+echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "..........................................................."
+
 echo ">>> Installing Gnome"
 eselect profile set 7  #systemd desktop gnome
 emerge gnome-base/gnome gnome-extra/gnome-tweaks gnome-extra/gnome-shell-extensions
