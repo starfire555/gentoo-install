@@ -23,11 +23,6 @@ echo ">>> Copying resolv.conf from host /etc to target etc"
 cp --dereference /etc/resolv.conf etc/
 echo "..........................................................."
 
-### HOST ###
-#echo 'BINPKG_FORMAT="gpkg"' >> etc/portage/make.conf
-#echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
-############
-
 ### CLIENT ###
 echo ">>> Updating make.conf: MERGE_DEFAULT_OPTS --> getbinpkgonly"
 echo 'EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"' >> etc/portage/make.conf
