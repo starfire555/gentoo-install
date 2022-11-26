@@ -2,7 +2,7 @@ echo ">>> Setting package USE flags"
 echo "media-libs/libsndfile minimal" >> /etc/portage/package.use/package.use
 echo ">=dev-libs/libdbusmenu-16.04.0-r2 gtk3" >> /etc/portage/package.use/package.use
 echo "net-misc/remmina rdp ssh spice vnc" >> /etc/portage/package.use/package.use
-echo ">=sys-libs/zlib-1.2.12-r3 minizip" >> /etc/portage/package.use/package.use #for telegram-desktop:
+echo ">=sys-libs/zlib-1.2.12-r3 minizip" >> /etc/portage/package.use/package.use #for telegram-desktop and vlc:
 echo ">=media-video/ffmpeg-4.4.2 opus" >> /etc/portage/package.use/package.use #for telegram-desktop:
 echo "..........................................................."
 
