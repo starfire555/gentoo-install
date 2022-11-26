@@ -33,6 +33,6 @@ sed -i 's/#WaylandEnable=false/WaylandEnable=false/g' /etc/gdm/custom.conf
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
-emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop
-emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop
+emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
 echo "..........................................................."
