@@ -28,20 +28,6 @@ echo 'BINPKG_FORMAT="gpkg"' >> etc/portage/make.conf
 echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 ############
 
-### CLIENT ###
-#echo ">>> Updating make.conf: MERGE_DEFAULT_OPTS --> getbinpkgonly"
-#echo 'EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"' >> etc/portage/make.conf
-#echo "..........................................................."
-
-#echo ">>> Updating etc/portage/binrepos.conf with binhost details"
-#cat <<EOF > etc/portage/binrepos.conf
-#[binhost]
-#sync-uri = http://192.168.1.186:80/packages
-#priority = 10
-#EOF
-#echo "..........................................................."
-############
-
 ### HOST gentoo ###
 emerge www-servers/lighttpd
 mv /etc/lighttpd/lighttpd.conf /etc/lighttpd/lighttpd.conf.original
@@ -73,14 +59,14 @@ EOF
 ############
 
 ### HOST arch ###
-pacman -S lighttpd
-cat <<EOF >> /etc/lighttpd/lighttpd.conf
+#pacman -S lighttpd
+#cat <<EOF >> /etc/lighttpd/lighttpd.conf
 
 # add this to the end of the standard configuration
-server.dir-listing = "enable"
-server.modules += ( "mod_alias" )
-alias.url = ( "/packages" => "/mnt/gentoo/var/cache/binpkgs/" )
-EOF
+#server.dir-listing = "enable"
+#server.modules += ( "mod_alias" )
+#alias.url = ( "/packages" => "/mnt/gentoo/var/cache/binpkgs/" )
+#EOF
 ############
 
 #echo ">>> Mounting proc, sys, dev, run, tmpfs, shm"
