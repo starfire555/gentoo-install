@@ -26,8 +26,8 @@ echo "net-im/telegram-desktop-bin ~amd64" >> /etc/portage/package.accept_keyword
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
-emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi
-emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi
+emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc
 echo "..........................................................."
 
 echo ">>> Installing xrdp"
