@@ -13,6 +13,12 @@ echo 'ACCEPT_LICENSE="-* @FREE @BINARY-REDISTRIBUTABLE microsoft-edge Microsoft-
 echo 'VIDEO_CARDS="intel"' >> etc/portage/make.conf
 echo "..........................................................."
 
+## NOTE for NVIDIA 470 setup ###
+#echo "x11-drivers/nvidia-drivers tools" >> /etc/portage/package.use/package.use
+#echo ">x11-drivers/nvidia-drivers-490" >> /etc/portage/package.mask /package.mask
+#echo ">gui-libs/egl-wayland-1.1.8" >> /etc/portage/package.mask /package.mask
+################################
+
 echo ">>> Updating @world"
 emerge --update --deep --newuse @world
 echo "..........................................................."
