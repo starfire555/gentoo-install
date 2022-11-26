@@ -43,19 +43,33 @@ echo 'FEATURES="buildpkg"' >> etc/portage/make.conf
 ############
 
 ### HOST gentoo ###
-#emerge www-servers/lighttpd
-#cat <<EOF >> /etc/lighttpd/lighttpd.conf
-#$SERVER["socket"] == "192.168.1.186:443" {
-  #server.name = "192.168.1.186"
-  #server.document-root = "/var/www/localhost/"
-  #server.errorlog = "/var/log/lighttpd/http_error.log"
-  #accesslog.filename = "/var/log/lighttpd/http_access.log"
-#}
-## add this to the end of the standard configuration
-#server.dir-listing = "enable"
-#server.modules += ( "mod_alias" )
-#alias.url = ( "/packages" => "/var/cache/binpkgs/" )
-#EOF
+emerge www-servers/lighttpd
+mv /etc/lighttpd/lighttpd.conf /etc/lighttpd/lighttpd.conf.original
+cat <<EOF > /etc/lighttpd/lighttpd.conf
+server.port		= 80
+server.username		= "lighttpd"
+server.groupname	= "lighttpd"
+server.document-root	= "/var/www"
+server.errorlog		= "/var/log/lighttpd/error.log"
+dir-listing.activate	= "enable"
+index-file.names	= ( "index.html" )
+mimetype.assign		= (
+				".html" => "text/html",
+				".txt" => "text/plain",
+				".css" => "text/css",
+				".js" => "application/x-javascript",
+				".jpg" => "image/jpeg",
+				".jpeg" => "image/jpeg",
+				".gif" => "image/gif",
+				".png" => "image/png",
+				"" => "application/octet-stream"
+			)
+
+# add this to the end of the standard configuration
+server.dir-listing = "enable"
+server.modules += ( "mod_alias" )
+alias.url = ( "/packages" => "/mnt/arch/mnt/gentoo/var/cache/binpkgs/" )
+EOF
 ############
 
 ### HOST arch ###
