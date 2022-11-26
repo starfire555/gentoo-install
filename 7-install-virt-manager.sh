@@ -1,4 +1,4 @@
-echo app-emulation/qemu vde spice ssh >> /etc/portage/package.use/package.use
+echo app-emulation/qemu vde spice ssh usbredir >> /etc/portage/package.use/package.use
 echo net-misc/spice-gtk usbredir >> /etc/portage/package.use/package.use
 echo net-dns/dnsmasq script >> /etc/portage/package.use/package.use
 
