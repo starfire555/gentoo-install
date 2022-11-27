@@ -1,5 +1,5 @@
 echo ">>> Setting USE flag for poppler"
-echo "app-text/poppler -qt5" >> /etc/portage/package.use/package.use
+#echo "app-text/poppler -qt5" >> /etc/portage/package.use/package.use
 echo "..........................................................."
 
 echo ">>> Setting package USE flags"
