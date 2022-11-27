@@ -7,7 +7,7 @@ emerge app-misc/screen neofetch btop sudo app-portage/gentoolkit esearch media-s
 echo "..........................................................."
 
 echo ">>> Enabling and syncing overlays"
-eselect repository enable guru ace brave-overlay nest && emerge --sync guru ace brave-overlay nest
+eselect repository enable guru ace brave-overlay nest pf4public && emerge --sync guru ace brave-overlay nest pf4public
 echo "..........................................................."
 
 echo ">>> Updating esearch database"
