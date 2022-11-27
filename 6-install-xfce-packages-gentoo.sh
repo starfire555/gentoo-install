@@ -21,14 +21,14 @@ systemctl enable lightdm
 echo "..........................................................."
 
 echo ">>> Setting package ACCEPT_KEYWORDS"
-echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "app-editors/vscodium ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "net-im/telegram-desktop-bin ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
-emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc caffeine-ng
-emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc caffeine-ng
+emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscodium telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc caffeine-ng
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscodium telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin x11-themes/papirus-icon-theme rofi vlc caffeine-ng
 echo "..........................................................."
 
 echo ">>> Installing xrdp"
