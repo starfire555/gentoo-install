@@ -10,7 +10,11 @@ echo ">>> Updating make.conf with USE flags, ACCEPT_LICENSE and VIDEO_CARDS"
 cd /
 echo 'USE="alsa pulseaudio branding samba"' >> etc/portage/make.conf
 echo 'ACCEPT_LICENSE="-* @FREE @BINARY-REDISTRIBUTABLE microsoft-edge Microsoft-vscode all-rights-reserved ValveSteamLicense ZOOM MPEG-4"' >> etc/portage/make.conf
-echo 'VIDEO_CARDS="intel"' >> etc/portage/make.conf
+echo 'VIDEO_CARDS="intel qxl"' >> etc/portage/make.conf
+echo "..........................................................."
+
+echo ">>> Setting package USE flags"
+echo "sys-libs/zlib minizip" >> /etc/portage/package.use/package.use #for telegram-desktop and vlc:
 echo "..........................................................."
 
 ## NOTE for NVIDIA 470 setup ###
