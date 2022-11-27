@@ -24,3 +24,17 @@ echo ">>> Installing desktop packages"
 emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin vlc
 emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode telegram-desktop-bin nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin vlc
 echo "..........................................................."
+
+echo ">>> Installing xrdp"
+echo net-misc/xrdp ~amd64 >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo net-misc/xorgxrdp ~amd64 >> /etc/portage/package.accept_keywords/package.accept_keywords
+
+emerge xrdp xorgxrdp
+
+systemctl enable --now xrdp
+
+echo '#!/bin/bash' > /home/x/.xinitrc
+echo 'gnome-session' >> /home/x/.xinitrc
+chmod +x /home/x/.xinitrc
+chown x: /home/x/.xinitrc
+echo "..........................................................."
