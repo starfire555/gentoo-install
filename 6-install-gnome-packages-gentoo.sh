@@ -7,7 +7,7 @@ echo ">=media-video/ffmpeg-4.4.2 opus" >> /etc/portage/package.use/package.use #
 echo "..........................................................."
 
 echo ">>> Setting package ACCEPT_KEYWORDS"
-echo "app-editors/vscode ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
+echo "app-editors/vscodium ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "app-backup/timeshift ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo "..........................................................."
 
@@ -33,8 +33,8 @@ sed -i 's/#WaylandEnable=false/WaylandEnable=false/g' /etc/gdm/custom.conf
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
-emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
-emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscode nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
+emerge --fetchonly microsoft-edge youtube-dl simplescreenrecorder app-editors/vscodium nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
+emerge microsoft-edge youtube-dl simplescreenrecorder app-editors/vscodium nomacs terminator remmina pavucontrol timeshift firefox-bin plocate qbittorrent libreoffice-bin flameshot brave-bin telegram-desktop vlc
 echo "..........................................................."
 
 echo ">>> Installing xrdp"
