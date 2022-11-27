@@ -37,3 +37,8 @@ echo 'gnome-session' >> /home/x/.xinitrc
 chmod +x /home/x/.xinitrc
 chown x: /home/x/.xinitrc
 echo "..........................................................."
+
+echo ">>> Installing flatpak"
+emerge flatpak
+# RUN AS NORMAL USER: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo "..........................................................."
