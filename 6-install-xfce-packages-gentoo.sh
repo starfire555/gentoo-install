@@ -43,6 +43,12 @@ chmod +x /home/x/.xinitrc
 systemctl enable xrdp
 echo "..........................................................."
 
+echo ">>> Installing icecast, darkice, darksnow"
+emerge icecast darksnow
+
+systemctl enable icecast
+echo "..........................................................."
+
 #echo ">>> Installing zoom-bin"
 #echo "net-im/zoom-bin ~amd64" >> /etc/portage/package.accept_keywords/package.accept_keywords
 #emerge --ask --verbose zoom-bin
