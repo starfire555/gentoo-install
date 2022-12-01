@@ -18,7 +18,7 @@ emerge kde-apps/kdecore-meta #lessen the MAKEOPTS value
 systemctl set-default graphical
 systemctl enable sddm
 
-/etc/pulse/client.conf
+sed -i 's/autospawn = no/autospawn = yes/g' /etc/pulse/client.conf
 
 echo "..........................................................."
 
