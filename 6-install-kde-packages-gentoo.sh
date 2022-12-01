@@ -14,7 +14,10 @@ echo ">>> Installing KDE"
 eselect profile set 10  #systemd desktop plasma
 emerge kde-plasma/plasma-meta
 emerge --update --deep --newuse @world
+sed -i 's/MAKEOPTS="-j9"/MAKEOPTS="-j5"/g' /etc/portage/make.conf
 emerge kde-apps/kdecore-meta #lessen the MAKEOPTS value
+sed -i 's/MAKEOPTS="-j5"/MAKEOPTS="-j9"/g' /etc/portage/make.conf
+emerge kde-misc/bismuth
 systemctl set-default graphical
 systemctl enable sddm
 
