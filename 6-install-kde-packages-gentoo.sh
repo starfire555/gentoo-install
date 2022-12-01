@@ -18,6 +18,8 @@ emerge kde-apps/kdecore-meta #lessen the MAKEOPTS value
 systemctl set-default graphical
 systemctl enable sddm
 
+/etc/pulse/client.conf
+
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
