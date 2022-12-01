@@ -17,6 +17,7 @@ emerge --update --deep --newuse @world
 emerge kde-apps/kdecore-meta #lessen the MAKEOPTS value
 systemctl set-default graphical
 systemctl enable sddm
+
 echo "..........................................................."
 
 echo ">>> Installing desktop packages"
@@ -33,7 +34,7 @@ emerge xrdp xorgxrdp
 systemctl enable --now xrdp
 
 echo '#!/bin/bash' > /home/x/.xinitrc
-echo 'gnome-session' >> /home/x/.xinitrc
+echo 'startplasma-x11' >> /home/x/.xinitrc
 chmod +x /home/x/.xinitrc
 chown x: /home/x/.xinitrc
 echo "..........................................................."
