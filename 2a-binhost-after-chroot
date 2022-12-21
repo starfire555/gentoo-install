@@ -1,0 +1,4 @@
+cd /var/www
+ln -s /mnt/gentoo-pro-bh-kde/var/cache/binpkgs packages-kde
+ln -s /mnt/gentoo-pro-bh-xfce/var/cache/binpkgs packages-xfce
+cd
