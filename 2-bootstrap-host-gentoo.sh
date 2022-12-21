@@ -54,7 +54,7 @@ mimetype.assign		= (
 # add this to the end of the standard configuration
 server.dir-listing = "enable"
 server.modules += ( "mod_alias" )
-alias.url = ( "/packages" => "/mnt/arch/mnt/gentoo/var/cache/binpkgs/" )
+#alias.url = ( "/packages" => "/mnt/arch/mnt/gentoo/var/cache/binpkgs/" )
 EOF
 ############
 
