@@ -1,9 +1,10 @@
 echo app-emulation/qemu vde spice ssh usbredir >> /etc/portage/package.use/package.use
 echo net-misc/spice-gtk usbredir >> /etc/portage/package.use/package.use
 echo net-dns/dnsmasq script >> /etc/portage/package.use/package.use
+echo net-libs/gnutls tools pkcs11 >> /etc/portage/package.use/package.use
 
-emerge --fetchonly app-emulation/virt-manager net-misc/bridge-utils
-emerge app-emulation/virt-manager net-misc/bridge-utils
+emerge --fetchonly app-emulation/virt-manager net-misc/bridge-utils swtpm
+emerge app-emulation/virt-manager net-misc/bridge-utils swtpm
 
 systemctl enable libvirtd.service
 
