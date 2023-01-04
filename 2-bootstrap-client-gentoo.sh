@@ -35,6 +35,18 @@ sync-uri = http://192.168.1.126:80/packages
 priority = 10
 EOF
 echo "..........................................................."
+
+echo ">>> Updating etc/portage/repos.conf/gentoo.conf with sync host details"
+cat << EOF > etc/portage/repos.conf/gentoo.conf
+[DEFAULT]
+main-repo = gentoo
+
+[gentoo]
+location = /var/db/repos/gentoo
+sync-type = rsync
+sync-uri = rsync://gentoo-pro/gentoo-portage
+EOF
+echo "..........................................................."
 ############
 
 echo ">>> Mounting proc, sys, dev, run, tmpfs, shm"
