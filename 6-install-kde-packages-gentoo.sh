@@ -34,7 +34,9 @@ echo ">>> Installing xrdp"
 echo net-misc/xrdp ~amd64 >> /etc/portage/package.accept_keywords/package.accept_keywords
 echo net-misc/xorgxrdp ~amd64 >> /etc/portage/package.accept_keywords/package.accept_keywords
 
+sed -i 's/EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/#EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/g' /etc/portage/make.conf
 emerge xrdp xorgxrdp
+sed -i 's/#EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --getbinpkgonly"/g' /etc/portage/make.conf
 
 systemctl enable --now xrdp
 
