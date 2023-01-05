@@ -44,7 +44,7 @@ main-repo = gentoo
 [gentoo]
 location = /var/db/repos/gentoo
 sync-type = rsync
-sync-uri = rsync://gentoo-pro/gentoo-portage
+sync-uri = rsync://192.168.1.126/gentoo-portage
 EOF
 echo "..........................................................."
 ############
